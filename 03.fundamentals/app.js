@@ -14,16 +14,26 @@ console.log('Yargs:  ', argv);
 
 switch (command) {
   case 'add':
-    return notes.addNote(argv.title, argv.body);
-
+    let note = notes.addNote(argv.title, argv.body);
+    if (note) {
+      return console.log('Note created! ', note.title, note.body);
+    } else {
+      return console.log('Note title is a duplicate!');
+    }
   case 'read':
     return notes.getNote(argv.title);
 
   case 'list':
-    return notes.getAll();
+    return notes.getAllNotes();
 
   case 'remove':
-    return notes.removeNote(argv.title);
+    // console.log(`Title ${argv.title} was removed!`);
+    const noteRemoved = notes.removeNote(argv.title);
+    if (noteRemoved) {
+      return console.log('Note was removed')
+    } else {
+      return console.log('Note was not removed')
+    }
 
   default:
     return console.log('Command not found!')
