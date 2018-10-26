@@ -16,12 +16,20 @@ switch (command) {
   case 'add':
     let note = notes.addNote(argv.title, argv.body);
     if (note) {
-      return console.log('Note created! ', note.title, note.body);
+      console.log('Note was added!')
+      return notes.logNote(note);
     } else {
       return console.log('Note title is a duplicate!');
     }
+
   case 'read':
-    return notes.getNote(argv.title);
+    let readNote = notes.getNote(argv.title);
+    if (readNote) {
+      console.log('Note was found!')
+      return notes.logNote(readNote);
+    } else {
+      return console.log('This note does not exist!');
+    }
 
   case 'list':
     return notes.getAllNotes();
