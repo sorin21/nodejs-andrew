@@ -1,0 +1,13 @@
+1. node = takes your javascript code, it compiles into machine code and executes it.
+
+2. global = same like window in javascript
+3. process = same like document in javascript, but shows info about executed process
+
+ex: process.exit(0) = exit with no errors
+
+4. inspect
+- repl = read, evaluate, print, loop
+- n = next
+- c = continuue
+
+node --inspect-brk  app.js read --title=Blue
