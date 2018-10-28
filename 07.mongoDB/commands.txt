@@ -1,0 +1,13 @@
+1. Primul terminal:
+mongod.exe --dbpath "E:\02.andrew\02.nodejs\07.mongoDB\data"
+  Al doilea terminal:
+  mongo.exe
+
+  Ambele comenzi rulate in:
+  C:\Program Files\MongoDB\Server\4.0\bin
+  
+2. https://robomongo.org/download
+
+3. http://mongodb.github.io/node-mongodb-native/3.1/api/
+
+4.  node mongodb-connect.js
